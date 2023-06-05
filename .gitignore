@@ -1,0 +1,5 @@
+node_modules/
+
+*.xd
+*.fig
+.DS_Store

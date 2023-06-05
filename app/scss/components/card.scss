@@ -1,0 +1,157 @@
+@use '../util' as *;
+
+.card {
+  background-color: var(--card-background);
+  color: var(--dark-text-2);
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  padding: rem(25);
+  border-radius: rem(5);
+  overflow: hidden;
+  position: relative;
+
+  &--title {
+    font-size: rem(14);
+    color: var(--small-title);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  &--change {
+    display: flex;
+      justify-content: space-between;
+
+      &--number {
+        font-size: rem(30);
+        font-weight: bold;
+        color: var(--small-count);
+      }
+  }
+
+  &--small {
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+  }
+
+  
+  &--facebook {
+    border-top: rem(5) solid var(--facebook);
+
+
+  }
+  &--twitter {
+    border-top: rem(5) solid var(--twitter);
+    
+  }
+
+  &--instagram{
+    padding-top: rem(30);
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: rem(5);
+      background: linear-gradient(225deg, var(--instagram-start), var(--instagram-middle), var(--instagram-end));
+  }
+}
+
+  
+
+  &--youtube {
+    border-top: rem(5) solid var(--youtube);
+    
+  }
+
+  &__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(28);
+  }
+
+  &__icon {
+    margin-right: rem(8);
+    height: rem(20);
+    width: rem(20);
+
+  }
+
+  &__username {
+    font-size: rem(12);
+    font-weight: bold;
+    color: var(--username-color);
+  }
+
+  &__followers {
+    margin-bottom: rem(25);
+
+  }
+
+  &__count {
+    color: var(--count-color);
+    margin-bottom: rem(4);
+    line-height: 1;
+    letter-spacing: rem(-2);
+    
+    &--big {
+      font-size: rem(56);
+      
+    }
+
+  }
+
+  &__label {
+    color: var(--dark-text-1);
+    font-size: rem(12);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: rem(5);
+
+  }
+
+  &__change {
+    font-size: rem(12);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-right: rem(4);
+    }
+    
+    &--up {
+      color: var(--limegreen);
+
+    }
+
+    &--down {
+      color: var(--brightred);
+    }
+  }
+}
+
+.card:hover {
+  //background-color: var(--card-background);
+  opacity: 0.8;
+  transition: ease-in 150ms;
+  cursor: pointer;
+
+  .card__count--big {
+    font-size: rem(60);
+    transition: ease-in 150ms;
+  }
+
+  .card--change--number {
+    font-size: rem(32);
+    transition: ease-in 150ms;
+  }
+}
+
